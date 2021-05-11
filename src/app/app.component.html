@@ -1,14 +1,14 @@
-<!-- Welcome to {{title}},<br>
-Hello {{user}} <br>
-{{product1.productName}}
-<ul>
-  <li *ngFor="let item of products">{{item.productName}}</li>
-</ul> -->
-
-
-
-<app-navi></app-navi>
-<app-category></app-category>
-<app-product></app-product>
-
-<router-outlet></router-outlet>
+<div class="container">
+  <app-navi></app-navi>
+  <!--Bir sayfayı 12 eşit parçaya böldük  -->
+  <div class="row">
+    <!-- ilk üç kolon kategori, sonraki 9 kolon ürünler-->
+    <div class="col-md-3">
+      <app-category></app-category>
+    </div>
+    <div class="col-md-9">
+      <app-product></app-product>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
